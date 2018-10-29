@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Especificidad</title>
+
+    <style>
+        /**
+        El concepto:
+        CSS (Cascading Style Sheets) ya nos indica que cascada es un concepto importante.
+         A su nivel más básico indica que el orden de las reglas CSS importa, pero es algo más que eso. 
+         Que prevalezcan unos selectores sobre otros en la cascada depende de tres factores 
+         (en orden de importancia — los primeros prevalecen sobre los últimos):
+
+            1.Importancia
+            2. Especificidad
+            3. Orden del código
+
+
+        ImportanciaSection
+        En CSS, hay un trozo de sintaxis que podemos usar para asegurarnos que una determinada regla siempre "gane" 
+        sobre todas las demás: !important.
+
+        EspecificidadSection
+        La Especificidad es en sí una medida de cómo de específico es un selector — cuantos elementos puede seleccionar. 
+        Como hemos mostrado en el ejemplo anterior, los selectores de elementos son poco específicos. 
+        Los selectores de clase son más específicos, por lo que prevalecen sobre los selectores de elementos. Los selectores 
+        ID son todavía más específicos, por lo tanto ganan frente a los de clase. La única forma de vencer a los selectores ID 
+        es usando la declaración !important.
+
+
+        Orden del códigoSection
+        Como hemos mencionado, si varios selectores competidores tienen la misma importancia y especificidad, el tercer factor que
+         interviene para decidir qué regla vence es el orden del código — las últimas reglas prevalecen sobre las primeras.
+        **/
+        /* ImportanciaSection */
+        
+        .better {
+            background-color: gray;
+            border: none !important;
+        }
+        /* EspecificidadSection */
+        
+        #outer #inner a {
+            background-color: blue;
+        }
+        /* Orden del código */
+        
+        p {
+            color: blue;
+        }
+        /* This rule will win over the first one */
+        
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Introduction_to_CSS/Cascada_y_herencia">Ver mas...</a>
+</body>
+
+</html>

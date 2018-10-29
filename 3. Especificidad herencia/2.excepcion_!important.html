@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Especificidad</title>
+
+    <style>
+        /**
+        *La excepción !important
+        Cuando se emplea important en una declaración de estilo, esta declaración sobrescribe a cualquier otra. 
+        Aunque técnicamente !important  no tiene nada que ver con especificidad, interactúa directamente con esta. 
+        Sin embargo, el uso de !important es una mala práctica y debería evitarse porque hace que el código sea más 
+        difícil de depurar al romper la cascada 
+
+            *Algunas reglas del juego:
+
+            -Busca siempre una manera de emplear la especificidad antes de considerar el uso de !important
+            -Usa !important solo en declaraciones específicas de CSS que sobrescriban CSS foráneo (de librerías externas como Bootstrap o normalize.css).
+            -Nunca uses !important cuando estás intentando escribir un plugin/mashup.
+            -Nunca uses !important en todo el CSS.
+
+
+            *En lugar de usar !important, considera:
+
+            -Hacer un mejor uso de las propiedades en cascada de CSS.
+            -Usar reglas más específicas. Indicando uno o más elementos antes del elemento que estás seleccionando, la regla se vuelve más específica y gana mayor prioridad
+            -Como un caso especial sin sentido para (2), duplicar selectores simples para aumentar la especificidad cuando no tiene nada más que especificar.
+        
+        **/
+        
+        .wrap__title {
+            color: orange;
+        }
+        
+        h1 !important {
+            color: lime;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap__title">
+            <h1 class="title">Hola mundo</h1>
+        </div>
+        <div class="wrap__list">
+            <ul>
+                <li class="active">item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li class="old elegant">item 5</li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS/Especificidad">Ver mas...</a>
+</body>
+
+</html>

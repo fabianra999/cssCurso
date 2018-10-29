@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectores de atributo</title>
+
+    <style>
+        /**
+    El selector de atributos CSS coincide con los elementos en función de la presencia o el valor de un atributo determinado.
+    
+    SyntaxSection:
+
+    [attr] => Representa elementos con un nombre de atributo de attr.
+    [attr=value] => Representa elementos con un nombre de atributo de attr cuyo valor es exactamente el valor.
+    [attr~=value] => Representa elementos con un nombre de atributo de attr cuyo valor es una lista de palabras separadas por espacios en blanco, una de las cuales es exactamente valor.
+    [attr^=value] => Representa elementos con un nombre de atributo de attr cuyo valor es prefijado (precedido) por valor.
+    [attr$=value] => Representa elementos con un nombre de atributo de attr cuyo valor está sufijado (seguido) por valor
+    [attr*=value] => Representa elementos con un nombre de atributo de attr cuyo valor contiene al menos una aparición de valor dentro de la cadena.
+    **/
+        
+        a {
+            color: blue;
+        }
+        /* Enlaces internos, comenzando con "#" */
+        
+        a[href^="#"] {
+            background-color: gold;
+        }
+        /* Enlaces con "example" en cualquier lugar en la URL */
+        
+        a[href*="example"] {
+            background-color: silver;
+        }
+        /* Enlaza con "insensitive" en cualquier lugar de la URL */
+        
+        a[href*="insensitive" i] {
+            color: cyan;
+        }
+        /* Enlaces que terminan en ".org" */
+        
+        a[href$=".org"] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrap__title">
+            <h1 class="title">Hola mundo</h1>
+        </div>
+        <div class="wrap__list">
+            <ul>
+                <li><a href="#internal">Internal link</a></li>
+                <li><a href="http://example.com">Example link</a></li>
+                <li><a href="#InSensitive">Insensitive internal link</a></li>
+                <li><a href="http://example.org">Example org link</a></li>
+            </ul>
+        </div>
+    </div>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">ver mas...</a>
+</body>
+
+</html>

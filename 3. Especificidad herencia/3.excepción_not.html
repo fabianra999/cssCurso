@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Especificidad</title>
+
+    <style>
+        /**
+        *La excepción :not
+        La pseudo-clase negación :not no es considerada una pseudo-clase para el cálculo de la especificidad. Pero los selectores colocados dentre de ella, si cuentan como 
+        selectores normales a la hora de determinar el valor de los tipos de selectores. 
+
+        **/
+        
+        div.outer p {
+            color: orange;
+        }
+        
+        div:not(.outer) p {
+            color: lime;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <p>Esto está en el outer div.</p>
+        <div class="inner">
+            <p>Este texto está en el inner div.</p>
+        </div>
+    </div>
+
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS/Especificidad">Ver mas...</a>
+</body>
+
+</html>

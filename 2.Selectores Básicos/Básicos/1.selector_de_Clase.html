@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectores de clase</title>
+
+    <style>
+        /**
+         El selector de clase CSS hace coincidir los elementos en función del contenido de su atributo de clase.
+
+        SyntaxSection (.):
+        .class_name { estilo properties  }
+        [class~=class_name] { style properties }
+        **/
+        /*
+        Todos los elementos con class="title"  
+        */
+        
+        .title {
+            color: blue;
+        }
+        /* 
+        * Todos los elementos <li> con class="active" 
+        */
+        
+        li.active {
+            color: red;
+        }
+        /*
+        * Todos los elementos <li> con una lista de clase que incluye old y elegant
+        */
+        
+        li.old.elegant {
+            color: golt;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrap__title">
+            <h1 class="title">Hola mundo</h1>
+        </div>
+        <div class="wrap__list">
+            <ul>
+                <li class="active">item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+                <li class="old elegant">item 5</li>
+            </ul>
+        </div>
+    </div>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">ver mas...</a>
+</body>
+
+</html>

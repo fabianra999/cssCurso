@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectores de hermanos generales </title>
+
+    <style>
+        /**
+        El combinador ~ separa dos selectores y selecciona el segundo elemento sólo si está precedido por el primero y ambos comparten un padre común.
+        
+        SintaxisSection (~) (alt + 126) :
+        elemento ~ elemento { estilos }
+        **/
+        
+        p~span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrap__title">
+            <h1 class="title">Hola mundo</h1>
+        </div>
+        <div class="wrap__text">
+            <span>Este span no es rojo.</span>
+            <p>Aquí hay un párrafo.</p>
+            <code>Aquí hay algo de código.</code>
+            <span>Aquí hay un span. Es rojo porque va precedido de un párrafo y ambos comparten el mismo padre.</span>
+        </div>
+    </div>
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS/Selectores_hermanos_generales">ver mas...</a>
+</body>
+
+</html>

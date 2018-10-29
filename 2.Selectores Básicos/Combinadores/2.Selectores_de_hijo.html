@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectores de hermanos generales </title>
+
+    <style>
+        /**
+        El combinador > separa a dos selectores y busca solo a los elementos que coindicen con el segundo selector y que son hijos directos del primero. 
+        
+        SintaxisSection (>) (alt + 62) :
+        selector1 > selector2 { style properties }
+        **/
+        
+        span {
+            background-color: white;
+        }
+        
+        .wrap__text div>span {
+            background-color: DodgerBlue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrap__title">
+            <h1 class="title">Hola mundo</h1>
+        </div>
+        <div class="wrap__text">
+            <div>
+                <span>Span #1, dentro del div.
+                          <span>Span #2, dentro del span que está en el div.</span>
+                </span>
+            </div>
+            <span>Span #3, no está dentro del div.</span>
+        </div>
+    </div>
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS/Child_selectors">ver mas...</a>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectores de ID</title>
+    <style>
+        /**
+        El selector de ID de CSS coincide con un elemento basado en el valor de su atributo de ID. 
+        Para que el elemento sea seleccionado, su atributo de ID debe coincidir exactamente con el valor dado en el selector.
+
+        SyntaxSection (#):
+        #id_value { style properties }
+        [id=id_value] { style properties }
+        **/
+        /* The element with id="demo" */
+        
+        #item3 {
+            border: red 2px solid;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrap__title">
+            <h1 class="title">Hola mundo</h1>
+        </div>
+        <div class="wrap__list">
+            <ul>
+                <li class="active">item 1</li>
+                <li>item 2</li>
+                <li id="item3">item 3</li>
+                <li>item 4</li>
+                <li class="old elegant">item 5</li>
+            </ul>
+        </div>
+    </div>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">ver mas...</a>
+</body>
+
+</html>

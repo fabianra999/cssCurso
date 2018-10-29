@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Los selectores descendientes </title>
+
+    <style>
+        /**
+        El ␣ combinador  (que se supone que representan un espacio, o mejor dicho uno o más espacios en blanco) 
+        combina dos selectores tales que el selector combinado incluye sólo los elementos que coinciden con el segundo selector 
+        para los que hay un elemento ancestro que coincide con el primer selector. Los selectores descendientes son similares a 
+        selectores hijos , pero que no requieren que la relación entre los elementos coincidentes ser estrictamente entre padres e hijos.
+        
+        SintaxisSection ( ):
+        selector1 selector2 { propiedades de estilos }
+        **/
+        
+        span {
+            background-color: white;
+        }
+        
+        .wrap__text div>span {
+            background-color: DodgerBlue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrap__title">
+            <h1 class="title">Hola mundo</h1>
+        </div>
+        <div class="wrap__text">
+            <div>
+                <span>Span #1, dentro del div.
+                          <span>Span #2, dentro del span que está en el div.</span>
+                </span>
+            </div>
+            <span>Span #3, no está dentro del div.</span>
+        </div>
+    </div>
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS/Descendant_selectors">ver mas...</a>
+</body>
+
+</html>
